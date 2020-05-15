@@ -1,0 +1,144 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+    margin: auto;
+
+}
+
+.wrapper{
+    width: 800px;
+    background-image: url("bg.png");
+    background-repeat: repeat;
+}
+
+div{
+    display: block;
+}
+
+#halbkreis{
+    background-color: #d4938b;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: -200px auto auto auto;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    color: ivory;
+    text-align: center;
+}
+#halbkreis h1 {
+    padding-top: 150px;
+    font-size: 80px;
+    
+}
+
+h2 {
+    width: 350px;
+    text-align: right;
+    display: block;
+    margin-top: -60px;
+    display: block;
+    font-size: 18px;
+    color: ivory;
+  
+}
+
+
+nav{ 
+    top:0px;
+    margin-left: 500px;
+    display: block;
+    background-color: #97534c;
+    width: 200px;
+    position: sticky;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 11px;
+    z-index: 999;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    
+}
+a.hovertext:hover{
+    color: black;
+    
+}
+
+#aktuelleseite{
+    color: black;
+}
+
+div .icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-top: 25px;
+}
+
+div.icon img:hover{
+
+    transform: scale(1.1);
+   
+}
+
+p{
+    color: #97534c;
+}
+
+#MailIcon{
+    border-style: solid; border-width: 2px; border-color: black;
+    border-radius: 10px;
+}
+
+#InstaIcon{
+    border-radius: 40px;
+}
+
+.portrait{
+
+    width: 150px;
+    margin-left: 0%;
+
+}
+
+.kontaktformular{
+
+    display: block;
+    padding: 5px;
+}
+
+label{
+    
+    cursor: text;
+}
+
+#vorname{
+    background-color: #f6dcd3;
+}
+#nachname{
+    background-color: #f6dcd3;
+}
+#email{
+    background-color: #f6dcd3;
+}
+#nachricht{
+    background-color: #f6dcd3;
+}
+#absenden{
+    width: 100px;
+    background-color: #f6dcd3;
+}
+
+#hinweis{
+    font-size: 8px;
+    color: grey;
+}
+
+textarea{
+    width: 250px;
+}
+
+
