@@ -2,13 +2,14 @@ body{
     text-align: center;
     font-family: sans-serif;
     margin: auto;
-
-}
-
-.wrapper{
-    width: 800px;
     background-image: url("bg.png");
     background-repeat: repeat;
+}
+
+.wrapper{  
+    margin-left: auto;
+    margin-right: auto; 
+    width: 800px;
 }
 
 div{
