@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thecoffeehouse</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="TypescriptDatei.js"></script>
+    <script src="TypescriptDatei2.js" defer></script>
+</head>
+
+<body id="anfang">
+    <div class="leiste">
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <img src="ThecoffehouseNEUtransparent.png" alt="logo">
+                </div> 
+                <nav>
+                    <a href="#anfang">Home</a> |
+                    <a href="#coffeeanker">Coffee</a> |
+                    <a href="#muganker">Mugs</a> |
+                    <a href="#aboutanker">About us</a>
+                    <div id="shoppingbag">
+                         <a href="#"> <img src="shopping-bag.png" alt="shoppingbag"></a>
+                    </div>
+                   
+
+                </nav>
+            </div>
+        </header>
+        <div class="banner">
+            <h2>Life´s to short to drink bad coffee.</h2>
+        </div>
+        <div class="inhalt">
+            <div class="wrapper">
+                <main id="main">
+                <h2>-Recommended for you-</h2>
+                <!-- <div class="containerEmpfehlungen">
+                    <div class="Produkt">
+                        <img src="814BYeX4rnL._SL1500_.jpg" alt="Coffee Arabica">
+                        <h4>Coffee "Arabica"</h4>
+                        <p>Precious beans with great flavor</p>
+                        <h5>19,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="panda-printed-paper-coffee-cup-on-table-885021.jpg" alt="Mug Panda">
+                        <h4>Mug "Panda"</h4>
+                        <p>Recycled bamboo mug to-go</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="61tluJOP2RL._SL1000_.jpg" alt="Coffee Brasile">
+                        <h4>Coffee XL "Brasile"</h4>
+                        <p>Roasted coffee, 100 capsules</p>
+                        <h5>29,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="glass-cup-with-liquid-3556686.jpg" alt="Mug glass">
+                        <h4>Mug "Glass"</h4>
+                        <p>Elegant Mug made out of glass</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="selective-focus-photography-of-person-holding-the-adventure-891252.jpg" alt="Mug Adventure">
+                        <h4>Mug "Adventure"</h4>
+                        <p>White porcelain, black print</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="81vg60RH09L._SL1500_.jpg" alt="Coffee Classico">
+                        <h4>Coffee "Classico"</h4>
+                        <p>Classic, timeless taste</p>
+                        <h5>19,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                </div> -->
+
+                <h2 id="coffeeanker">-Coffee varieties-</h2>
+
+               <!--  <div class="containerCoffee">
+                    <div class="Produkt">
+                        <img src="61A0cAJAwOL._SL1000_.jpg" alt="Coffee Arabica">
+                        <h4>Coffee XL "Arabica"</h4>
+                        <p>Roasted coffee, 100 capsules</p>
+                        <h5>29,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="61tluJOP2RL._SL1000_.jpg" alt="Coffee Brasile">
+                        <h4>Coffee XL "Brasile"</h4>
+                        <p>Roasted coffee, 100 capsules</p>
+                        <h5>29,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="814BYeX4rnL._SL1500_.jpg" alt="Coffee Arabica">
+                        <h4>Coffee "Arabica"</h4>
+                        <p>Precious beans with great flavor</p>
+                        <h5>19,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="81tPuQWZhXL._SL1500_.jpg" alt="Coffee Espresso">
+                        <h4>Coffee "Espresso"</h4>
+                        <p>A liquid hug for your brain</p>
+                        <h5>19,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="81vg60RH09L._SL1500_.jpg" alt="Coffee Classico">
+                        <h4>Coffee "Classico"</h4>
+                        <p>Black as hell, strong as death and sweet as love</p>
+                        <h5>19,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="91btRQ0s2RL._SL1500_.jpg" alt="Coffe Colombia">
+                        <h4>Coffee "Colombia"</h4>
+                        <p>Where you Bean all my life?</p>
+                        <h5>19,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="91J7wPfYiwL._SL1500_.jpg" alt="Coffee Nicaragua">
+                        <h4>Coffee "Nicaragua"</h4>
+                        <p>Like a hug from your mug</p>
+                        <h5>19,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                </div> -->
+
+                <h2 id="muganker"> -Mugs- </h2>
+
+                <!-- <div class="containerMugs">
+
+                    <div class="Produkt">
+                        <img src="black-ceramic-mug-3483967.jpg" alt="Mug black">
+                        <h4>Mug "Black"</h4>
+                        <p>Simple, black mug with white print</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="glass-cup-with-liquid-3556686.jpg" alt="Mug glass">
+                        <h4>Mug "Glass"</h4>
+                        <p>Elegant Mug made out of glass</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="panda-printed-paper-coffee-cup-on-table-885021.jpg" alt="Mug Panda">
+                        <h4>Mug "Panda"</h4>
+                        <p>Recycled bamboo mug to-go</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="red-ceramic-mug-on-red-saucer-1187317.jpg" alt="Mug Red">
+                        <h4>Mug "Red"</h4>
+                        <p>Classic red mug set</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="selective-focus-photography-of-person-holding-the-adventure-891252.jpg" alt="Mug Adventure">
+                        <h4>Mug "Adventure"</h4>
+                        <p>White porcelain, black adventure print</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="white-ceramic-mug-with-water-4281787.jpg" alt="Mug Rhino">
+                        <h4>Mug "Rhino"</h4>
+                        <p>White porcelain, black rhino print</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="white-coffee-mug-on-brown-surface-1207918.jpg" alt="Mug Coffee">
+                        <h4>Mug "Freshly brewed coffee"</h4>
+                        <p>White porcelain, black coffee quote</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                    <div class="Produkt">
+                        <img src="white-happy-camper-printed-cup-on-brown-wooden-log-1239422.jpg" alt="Mug Camper">
+                        <h4>Mug "Happy Camper"</h4>
+                        <p>White porcelain, happy camper design</p>
+                        <h5>9,99€</h5>
+                        <label>
+                            <input type="button" class="addbutton" name="add" value="Add to cart">
+                        </label>
+                    </div>
+                </div> -->
+            </main>
+                <h2 id="aboutanker">-About us-</h2>
+
+                <div class="about">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta exercitationem quae quam,
+                        doloribus
+                        sit facere, ipsam, odio maiores vero totam rerum iure nemo pariatur voluptatem laudantium error
+                        quasi! Inventore, mollitia. <br>
+                        Culpa veniam blanditiis iste amet accusamus sunt sint iusto, excepturi dicta? Dolore eos dolorum
+                        distinctio animi autem libero praesentium voluptates similique quasi doloremque, amet quos
+                        mollitia
+                        laudantium eum repellendus reprehenderit? <br> <br>
+                        Ex ducimus perferendis, reprehenderit exercitationem sed, quod ratione distinctio eveniet
+                        laudantium
+                        commodi sapiente maxime natus tempora repudiandae voluptatibus eum voluptates aspernatur
+                        doloribus
+                        quaerat fugiat iusto quas provident? Nulla, eius quidem.
+                        Quisquam reprehenderit ipsa saepe. Asperiores sapiente ipsa iusto tempora, similique earum
+                        praesentium hic impedit ea commodi enim facilis fugit accusamus dolores voluptatum aspernatur
+                        eligendi a ex! Sit similique voluptatibus saepe? <br>
+                        Ipsa quasi atque inventore quisquam cumque ad aliquam aperiam, sit soluta mollitia, porro odio
+                        neque
+                        nisi placeat odit quae officia omnis tempore earum repellat unde deleniti numquam non labore?
+                        Ipsam.
+                        Tempore quas, vero totam excepturi consequatur pariatur natus! Voluptatum aut assumenda, quis
+                        sapiente fuga, sunt quam iste reiciendis velit pariatur repellat at, officiis blanditiis
+                        voluptatem
+                        minus optio quos esse ipsam. <br> <br>
+                        Aspernatur saepe labore repellat incidunt consectetur optio, minima eveniet. Quam suscipit, a
+                        cupiditate possimus quia quis qui expedita cum vero nobis mollitia, adipisci sapiente iusto
+                        distinctio at tenetur architecto iste.
+                        Molestias ducimus quo repellat animi illo libero numquam et adipisci alias quis inventore
+                        similique,
+                        consequuntur omnis mollitia voluptatum expedita enim consectetur exercitationem iste, nihil
+                        quod. Ut
+                        et iure magnam harum!
+                        Quo deserunt quae iste totam animi ducimus esse fugiat amet, earum dolor omnis repudiandae
+                        quisquam
+                        officia ex molestias nobis. Quas ut ipsam optio eligendi modi cupiditate beatae repudiandae
+                        omnis
+                        perspiciatis.
+                        Cum harum iste fuga laboriosam dolore provident mollitia praesentium corrupti corporis pariatur?
+                        Voluptatum, amet dolorem. Nam suscipit eum ex aut, dolorum debitis beatae, libero delectus
+                        accusantium perspiciatis, impedit quam deleniti.</p>
+                </div>
+            </div>
+            <footer>
+                <div class="Impressum">
+
+
+                    <h5>Good Vibes. Good Coffee.</h5>
+                    <p><i>Impressum</i></p>
+
+                </div>
+            </footer>
+        </div>
+        
+
+    </div>
+</body>
+
+</html>
