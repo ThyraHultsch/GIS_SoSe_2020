@@ -14,6 +14,7 @@ body{
 }
 
 header{
+    margin-top: -20px;
     height: 100px;
     background: #102629;
     width: 100%;
@@ -86,6 +87,12 @@ nav img:hover{
 }
 
 .inhalt{
+
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
     width: 100%;
     position: relative;
     top: 450px;
@@ -93,11 +100,27 @@ nav img:hover{
     
 }
 
+#coffee{
+    width: 100%;
+}
+.containerCoffee{
+    width:100%;
+}
+
+#mugs{
+    width: 100%
+}
+.containerMugs{
+    width: 100%;
+}
+    
+
 .inhalt h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 2px;
     padding-top: 40px;
     font-size: 22px;
+    width: 100%;
 }
 
 .inhalt * img{
@@ -114,6 +137,13 @@ nav img:hover{
     align-content: space-around;
 }
 
+#main{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+} 
 .containerCoffee{
     margin-top: 20px;
     display: flex;
