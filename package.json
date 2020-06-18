@@ -1,0 +1,23 @@
+{
+  "name": "thyra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node Aufgabe08/sinnvolleDatei.js"
+
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThyraHultsch/GIS_SoSe_2020.git"
+  },
+  "author": "thyra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThyraHultsch/GIS_SoSe_2020/issues"
+  },
+  "homepage": "https://github.com/ThyraHultsch/GIS_SoSe_2020#readme"
+}
