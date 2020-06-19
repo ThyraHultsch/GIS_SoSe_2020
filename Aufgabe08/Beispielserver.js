@@ -4,8 +4,8 @@ exports.A08Server = void 0;
 const Http = require("http");
 var A08Server;
 (function (A08Server) {
-    console.log("Starting server");
-    let port = Number(process.env.PORT);
+    console.log("Starting server"); //Ausgabe in Konsole: Starting Server
+    let port = Number(process.env.PORT); //Variable 'port' vom typ number wird erstellt um dem webserver zu sagen auf welchen Port es hören soll  
     if (!port)
         port = 8100;
     let server = Http.createServer();

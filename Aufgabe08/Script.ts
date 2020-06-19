@@ -5,7 +5,7 @@ namespace Aufgabe08 {
     let senden: HTMLButtonElement = <HTMLButtonElement> document.getElementById("senden");
     senden.addEventListener("click", handleClick);
 
-    async function handleClick(): Promise<void>{
+    async function handleClick(): Promise<void> {
 
         formData = new FormData(document.forms[0]);
         let url: string = "https://thyra.herokuapp.com/";

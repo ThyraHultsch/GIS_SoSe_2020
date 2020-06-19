@@ -1,8 +1,8 @@
 import * as Http from "http";
 
-export namespace A08Server {
-  console.log("Starting server");
-  let port: number = Number(process.env.PORT);
+export namespace A08Server { //Namespace 'A08Server' wird erstellt 
+  console.log("Starting server"); //Ausgabe in Konsole: Starting Server
+  let port: number = Number(process.env.PORT); //Variable 'port' vom typ number wird erstellt um dem webserver zu sagen auf welchen Port es hören soll  
   if (!port)
     port = 8100;
 
