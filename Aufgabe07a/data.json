@@ -1,0 +1,91 @@
+[   {"label": "Coffee Arabica", 
+    "description":"Precious beans with great flavor",
+    "price":"19.99",
+    "imgsrc":"Bilder/Arabica.jpg",
+    "kategorie":"Coffee"},
+
+    {"label": "Coffee XL Arabica", 
+    "description":"Roasted coffee, 100 capsules",
+    "price":"29.99",
+    "imgsrc":"Bilder/ArabicaBox.jpg",
+    "kategorie":"Coffee"},
+
+    {"label": "Coffee XL Brasile", 
+    "description":"Roasted coffee, 100 capsules",
+    "price":"29.99",
+    "imgsrc":"Bilder/brasilebox.jpg",
+    "kategorie":"Coffee"},
+
+    {"label": "Coffee Classico", 
+    "description":"Black as hell, strong as death and sweet as love",
+    "price":"19.99",
+    "imgsrc":"Bilder/classico.jpg",
+    "kategorie":"Coffee"},
+
+    {"label": "Coffee Espresso", 
+    "description":"A liquid hug for your brain",
+    "price":"19.99",
+    "imgsrc":"Bilder/Espresso.jpg",
+    "kategorie":"Coffee"},
+
+    {"label": "Coffee Nicaraqua", 
+    "description":"Where you Bean all my life?",
+    "price":"19.99",
+    "imgsrc":"Bilder/nicaragua.jpg",
+    "kategorie":"Coffee"},
+
+    {"label": "Coffee Colombia", 
+    "description":"Like a hug from your mug",
+    "price":"19.99",
+    "imgsrc":"Bilder/Colombia.jpg",
+    "kategorie":"Coffee"},
+
+    {"label": "Mug Adventure", 
+    "description":"White porcelain, black adventure",
+    "price":"9.99",
+    "imgsrc":"Bilder/adventurecup.jpg",
+    "kategorie":"Mugs"},
+
+    {"label": "Mug Black", 
+    "description":"Simple, black mug with white print",
+    "price":"9.99",
+    "imgsrc":"Bilder/blackmug.jpg",
+    "kategorie":"Mugs"},
+
+    {"label": "Mug Panda", 
+    "description":"Recycled bamboo mug to-go",
+    "price":"9.99",
+    "imgsrc":"Bilder/pandamug.jpg",
+    "kategorie":"Mugs"},
+
+    {"label": "Mug Happy Camper", 
+    "description":"White porcelain, happy camper design",
+    "price":"9.99",
+    "imgsrc":"Bilder/campermug.jpg",
+    "kategorie":"Mugs"},
+
+    {"label": "Mug Glass", 
+    "description":"Mug made out of glass",
+    "price":"9.99",
+    "imgsrc":"Bilder/glassmug.jpg",
+    "kategorie":"Mugs"},
+    
+    {"label": "Mug Red", 
+    "description":"Classic red mug",
+    "price":"9.99",
+    "imgsrc":"Bilder/redmug.jpg",
+    "kategorie":"Mugs"},
+    
+    {"label": "Mug Rhino", 
+    "description":"White porcelain, black rhino print",
+    "price":"9.99",
+    "imgsrc":"Bilder/rhinomug.jpg",
+    "kategorie":"Mugs"},
+
+    {"label": "Mug Freshly brewed coffee", 
+    "description":"White porcelain, black coffee quote",
+    "price":"9.99",
+    "imgsrc":"Bilder/coffeemug.jpg",
+    "kategorie":"Mugs"}
+
+]

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thecoffeehouse</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="Bilder/ThecoffehouseNEUtransparent.png" alt="Logo">
+        <div class="header">
+            <a href="Startseite.html">Home</a> |
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Kategorie</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#" id="coffeeButton">Coffee</a>
+                    <a href="#" id="mugsButton">Mugs</a>
+                    <a href="#" id="allButton">All</a>
+                </div>
+            </div>
+            <a href="#">| About us</a>
+            <div id="shoppingbag">
+                <a href="#"> <img src="Bilder/shopping-bag.png" alt="shopping-bag"></a>
+                <div id="shoppingbagNumber">
+                    <p id="number">0</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="Bilder/bar-1869656_12802222-2.jpg" alt="bannerbild">
+
+    </div>
+    <main>
+        <div class="alleArtikel">
+            <div class="kategorie">
+                <h1 id="coffee">-Coffee-</h1>
+            </div>
+            <div class="containerCoffee" id="containerCoffeeID"></div>
+            
+            <div class="kategorie">
+                <h1 id="mugs">-Mugs-</h1>
+            </div>
+            <div class="containerMugs" id="containerMugsID"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="Impressum">
+            <p>Good Vibes. Good Coffee.</p>
+            <p><i>Impressum</i></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
