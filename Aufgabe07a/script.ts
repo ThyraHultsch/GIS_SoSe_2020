@@ -1,5 +1,14 @@
 namespace Aufgabe07a {
 
+
+
+    /* Da meine Website durch die letzten Aufgaben wortwörtlich zu Frankenstein mutiert ist und mit jeder Woche immer schlechter
+    und schlechter wurde und sich Fehler, Dopplungen und eine verwirrende Struktur häuften, habe ich diese Woche meinen Shop mit
+    Jonathans Hilfe nocheinmal von Grund auf komplett neu programmiert und aufgebaut. Da ich ziemlich viel Hilfe von ihm benötigte um eine 
+    gute Struktur der Seite hinzubekommen um auch Aufgabe 7 machen zu können ähnelt sich unser Code teilweise.  */
+
+
+
     let divCoffee: HTMLElement = <HTMLElement> document.getElementById("containerCoffeeID");
     let divMugs: HTMLElement = <HTMLElement> document.getElementById("containerMugsID");
 
@@ -65,6 +74,7 @@ namespace Aufgabe07a {
             }
 
             const shoppingbagNumber: HTMLElement = <HTMLElement> document.getElementById("shoppingbagNumber");
+            shoppingbagNumber.setAttribute("style", "visibility: visible");
 
             const number: HTMLElement = <HTMLElement> document.getElementById("number");
             number.innerHTML = Number(number.innerHTML) + Number("1") + "";

@@ -107,14 +107,14 @@ img[alt=shopping-bag]{
     background-color: #e9d8cc;
     color: #102629;
     float: right;
-    /* margin-top: -82px;
-    margin-right: -90px; */
+    margin-top: -82px;
+    margin-right: -90px;
     line-height: 15px;
     padding: 10px;
     border-radius: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     visibility: hidden;
-    font-size: 22px;
+    font-size: 20px;
 
     
 }
