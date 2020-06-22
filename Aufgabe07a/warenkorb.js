@@ -33,7 +33,6 @@ var Aufgabe07a;
     hGesamtpreis.innerHTML += " " + localStorage.getItem("gesamtpreis") + "€";
     let buttonDeleteAll = document.getElementById("deleteAll");
     buttonDeleteAll.addEventListener("click", handleDeleteAll);
-    //Div löschen +Preis berechnen
     function handleDelete(_event) {
         let buttonPressed = _event.currentTarget;
         let identifier = buttonPressed.getAttribute("identifier");

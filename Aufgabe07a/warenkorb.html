@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>thecoffeehouse</title>
     <link rel="stylesheet" href="style.css">
-    <script src="data.js"></script>
-    <script src="script.js" defer></script>
+    <script src="warenkorb.js" defer></script>
 </head>
 
 <body>
@@ -25,10 +24,11 @@
             </div>
             <a href="#">| About us</a>
             <div id="shoppingbag">
-                <a href="warenkorb.html"> <img src="Bilder/shopping-bag.png" alt="shopping-bag"></a>
+                <a href="#"> <img src="Bilder/shopping-bag.png" alt="shopping-bag"></a>
                 <div id="shoppingbagNumber">
                     <p id="number">0</p>
                 </div>
+                <input id="deleteAll" type="button" value="Alle entfernen">
             </div>
         </div>
     </header>
@@ -48,6 +48,9 @@
                 <h1 id="mugs">-Mugs-</h1>
             </div>
             <div class="containerMugs" id="containerMugsID"></div>
+        </div>
+        <div>
+            <h1 id="gesamtpreis">Gesamtpreis:</h1>
         </div>
     </main>
 

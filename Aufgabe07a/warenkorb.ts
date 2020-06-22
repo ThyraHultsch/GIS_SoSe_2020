@@ -43,7 +43,7 @@ namespace Aufgabe07a {
     buttonDeleteAll.addEventListener("click", handleDeleteAll);
 
 
-    //Div löschen +Preis berechnen
+    
     function handleDelete(_event: Event): void {
         let buttonPressed: HTMLElement = <HTMLElement>_event.currentTarget;
         let identifier: string = <string>buttonPressed.getAttribute("identifier");
