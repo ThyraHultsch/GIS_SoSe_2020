@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start": "node Aufgabe08/sinnvolleDatei.js"
+    "start": "node Aufgabe09/Script.js"
 
     
   },
