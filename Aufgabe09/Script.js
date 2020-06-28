@@ -2,10 +2,10 @@
 var Aufgabe09;
 (function (Aufgabe09) {
     let formData;
-    let buttonActionHTML = document.getElementById("sendenHTML");
-    buttonActionHTML.addEventListener("click", handleClickHtml);
-    let buttonActionJson = document.getElementById("sendenJSON");
-    buttonActionJson.addEventListener("click", handleClickJson);
+    let buttonHTML = document.getElementById("sendenHTML");
+    buttonHTML.addEventListener("click", handleClickHtml);
+    let buttonJson = document.getElementById("sendenJSON");
+    buttonJson.addEventListener("click", handleClickJson);
     function handleClickHtml() {
         formData = new FormData(document.forms[0]);
         let serverURL = "https://thyra.herokuapp.com/";
@@ -20,12 +20,13 @@ var Aufgabe09;
         let serverResponse = document.getElementById("serverResponse");
         serverResponse.innerHTML = responseText;
     }
-    async function handleClickJson() {
+    function handleClickJson() {
         formData = new FormData(document.forms[0]);
         let serverURL = "https://thyra.herokuapp.com/";
         serverURL += "/json";
         let query = new URLSearchParams(formData);
         serverURL += "?" + query.toString();
+        communicateJson(serverURL);
     }
     async function communicateJson(_serverURL) {
         let response = await fetch(_serverURL);
