@@ -26,7 +26,9 @@ var Aufgabe09;
         serverURL += "/json";
         let query = new URLSearchParams(formData);
         serverURL += "?" + query.toString();
-        let response = await fetch(serverURL);
+    }
+    async function communicateJson(_serverURL) {
+        let response = await fetch(_serverURL);
         let responseText = await response.json();
         console.log(responseText);
     }

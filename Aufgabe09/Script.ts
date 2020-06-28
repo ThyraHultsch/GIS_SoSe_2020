@@ -27,8 +27,6 @@ namespace Aufgabe09 {
         serverResponse.innerHTML = responseText;
     }
 
-    
-
     async function handleClickJson(): Promise<void> {
         formData = new FormData(document.forms[0]);
         let serverURL: string = "https://thyra.herokuapp.com/";
@@ -36,10 +34,13 @@ namespace Aufgabe09 {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         serverURL += "?" + query.toString();
 
-        let response: Response = await fetch(serverURL);
+        
+    }
+
+    async function communicateJson(_serverURL: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_serverURL);
         let responseText: string = await response.json();
         console.log(responseText);
-
     }
 
 
