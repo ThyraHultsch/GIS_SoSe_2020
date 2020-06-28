@@ -33,9 +33,6 @@ var A09Server;
                 let jsonString = JSON.stringify(url.query);
                 _response.write(jsonString);
             }
-            else if (path == "//A8") {
-                _response.write(_request.url);
-            }
         }
         /* _response.write(_request.url); //schreibt URL als Output
         console.log(_request.url); */

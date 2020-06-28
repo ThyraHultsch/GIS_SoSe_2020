@@ -36,9 +36,7 @@ export namespace A09Server { //Namespace 'A08Server' wird erstellt
         let jsonString: string = JSON.stringify(url.query);
         _response.write(jsonString);
       }
-      else if (path == "//A8") {
-        _response.write(_request.url);
-      }
+      
     }
 
     /* _response.write(_request.url); //schreibt URL als Output 

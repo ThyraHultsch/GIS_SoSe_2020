@@ -2,13 +2,13 @@
 var Aufgabe09;
 (function (Aufgabe09) {
     let formData;
-    let buttonActionHTML = document.getElementById("performActionHtml");
+    let buttonActionHTML = document.getElementById("sendenHTML");
     buttonActionHTML.addEventListener("click", handleClickHtml);
-    let buttonActionJson = document.getElementById("perfomrActionJson");
+    let buttonActionJson = document.getElementById("sendenJSON");
     buttonActionJson.addEventListener("click", handleClickJson);
+    let serverURL = "https://thyra.herokuapp.com/";
     async function handleClickHtml() {
         formData = new FormData(document.forms[0]);
-        let serverURL = "https://thyra.herokuapp.com/";
         serverURL += "/html";
         let query = new URLSearchParams(formData);
         serverURL = serverURL + "?" + query.toString();
