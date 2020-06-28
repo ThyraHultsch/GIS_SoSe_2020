@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <script src="Script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThyrasCooleKontaktKontaktierungsformularwebsite</title>
+</head>
+<body>
+
+    <header>
+        <h1>Thyras coole Kontakt-Kontaktierungsformularwebsite</h1>
+    </header>
+    <main>
+
+        <form method="get" action=""> <!-- W3-Error, im Skript steht aber, dass somit die aktuelle URL genutzt wird -->
+        
+            <label>
+                <input type="text" name="vorname" id="vorname" placeholder="Vorname">
+            </label>
+            <br>
+            <label>
+                <input type="text" name="nachname" id="nachname" placeholder="Nachname">
+            </label>
+            <br>
+            <label>
+                <textarea id="nachricht" placeholder="Nachricht" rows=4></textarea>
+            </label>
+            <br> 
+
+            <label>Lieblingsfarbe:</label>
+            <input type="color" name="lieblingsfarbe" id="farbe">
+            <br>
+
+            <input type="checkbox" name="bild" id="checkbox">
+            <label>
+               Ich bestätige hiermit, dass Thyra eindeutig cooler ist als ich.
+            </label>
+            <br>
+            
+            <p id=hinweis> Mit Absenden der Nachricht bestätige ich den <u>Datenschutz</u></p>
+            <br>
+            <label>
+                <button type="button" id="senden">Abschicken</button>
+            </label>
+
+        </form>
+        <p id="serverResponse"></p>
+
+    </main>
+    
+</body>
+</html>
