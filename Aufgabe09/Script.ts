@@ -9,14 +9,19 @@ namespace Aufgabe09 {
     buttonActionJson.addEventListener("click", handleClickJson);
 
     
-    async function handleClickHtml(): Promise<void> {
+    function handleClickHtml(): void {
         formData = new FormData(document.forms[0]);
         let serverURL: string = "https://thyra.herokuapp.com/";
         serverURL += "/html";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         serverURL += "?" + query.toString();
         
-        let response: Response = await fetch(serverURL);
+        communicateHtml(serverURL);
+        
+    }
+
+    async function communicateHtml(_serverURL: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_serverURL);
         let responseText: string = await response.text();
         let serverResponse: HTMLElement = <HTMLElement> document.getElementById("serverResponse");
         serverResponse.innerHTML = responseText;

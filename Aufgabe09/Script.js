@@ -6,13 +6,16 @@ var Aufgabe09;
     buttonActionHTML.addEventListener("click", handleClickHtml);
     let buttonActionJson = document.getElementById("sendenJSON");
     buttonActionJson.addEventListener("click", handleClickJson);
-    async function handleClickHtml() {
+    function handleClickHtml() {
         formData = new FormData(document.forms[0]);
         let serverURL = "https://thyra.herokuapp.com/";
         serverURL += "/html";
         let query = new URLSearchParams(formData);
         serverURL += "?" + query.toString();
-        let response = await fetch(serverURL);
+        communicateHtml(serverURL);
+    }
+    async function communicateHtml(_serverURL) {
+        let response = await fetch(_serverURL);
         let responseText = await response.text();
         let serverResponse = document.getElementById("serverResponse");
         serverResponse.innerHTML = responseText;
