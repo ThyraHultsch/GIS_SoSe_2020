@@ -8,13 +8,13 @@ namespace Aufgabe09 {
     let buttonActionJson: HTMLButtonElement = <HTMLButtonElement> document.getElementById("sendenJSON");
     buttonActionJson.addEventListener("click", handleClickJson);
 
-    let serverURL: string = "https://thyra.herokuapp.com/";
+    
     async function handleClickHtml(): Promise<void> {
         formData = new FormData(document.forms[0]);
-        
+        let serverURL: string = "https://thyra.herokuapp.com/";
         serverURL += "/html";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        serverURL = serverURL + "?" + query.toString();
+        serverURL += "?" + query.toString();
         
         let response: Response = await fetch(serverURL);
         let responseText: string = await response.text();
@@ -29,7 +29,7 @@ namespace Aufgabe09 {
         let serverURL: string = "https://thyra.herokuapp.com/";
         serverURL += "/json";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        serverURL = serverURL + "?" + query.toString();
+        serverURL += "?" + query.toString();
 
         let response: Response = await fetch(serverURL);
         let responseText: string = await response.json();

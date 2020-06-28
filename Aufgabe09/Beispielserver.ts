@@ -20,8 +20,9 @@ export namespace A09Server { //Namespace 'A08Server' wird erstellt
     //Parameter ServerResponse repräsentiert beschreibbaren Stream zurück zum client
 
     //console.log("I hear voices!"); //Konsolenausgabe "I hear voices!"
+    _response.setHeader("content-type", "text/html; charset=utf-8");
     _response.setHeader("Access-Control-Allow-Origin", "*");
-    _response.setHeader("content-type", "text/html; charset=utf-8"); //bestimmt ein einzigen Header Wert
+     //bestimmt einen einzigen Header Wert
     
 
     if (_request.url) {
