@@ -11,7 +11,7 @@ export namespace Aufgabe11 {
     if (myArgs[0] == "local") {
         databaseUrl = "mongodb://localhost:27017";
     } else {
-        databaseUrl = "mongodb+srv://Testuser:testuser123@cluster0.whstr.mongodb.net/Aufgabe11?retryWrites=true&w=majority";
+        databaseUrl = "mongodb+srv://Testuser:1234@cluster0.whstr.mongodb.net/Aufgabe11?retryWrites=true&w=majority";
     }
 
 
