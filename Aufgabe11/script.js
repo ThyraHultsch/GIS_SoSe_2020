@@ -5,14 +5,14 @@ var Aufgabe11;
     let buttonActionHtml = document.getElementById("rein");
     buttonActionHtml.addEventListener("click", handleClickRein);
     let buttonActionJson = document.getElementById("zeigen");
-    buttonActionHtml.addEventListener("click", handleClickZeigen);
+    buttonActionJson.addEventListener("click", handleClickZeigen);
     async function handleClickRein() {
         formData = new FormData(document.forms[0]);
         let serverURL = "https://thyra.herokuapp.com";
         serverURL += "/rein";
         let query = new URLSearchParams(formData);
         serverURL += "?" + query.toString();
-        let formular = document.getElementById("formid");
+        let formular = document.getElementById("formular");
         formular.reset();
         await fetch(serverURL);
     }

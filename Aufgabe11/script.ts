@@ -6,7 +6,7 @@ namespace Aufgabe11{
     buttonActionHtml.addEventListener("click", handleClickRein);
 
     let buttonActionJson: HTMLButtonElement = <HTMLButtonElement> document.getElementById("zeigen");
-    buttonActionHtml.addEventListener("click", handleClickZeigen);
+    buttonActionJson.addEventListener("click", handleClickZeigen);
 
     async function handleClickRein(): Promise<void> {
         formData = new FormData(document.forms[0]);
@@ -16,7 +16,7 @@ namespace Aufgabe11{
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         serverURL += "?" + query.toString();
 
-        let formular: HTMLFormElement = <HTMLFormElement> document.getElementById("formid");
+        let formular: HTMLFormElement = <HTMLFormElement> document.getElementById("formular");
         formular.reset();
 
         await fetch(serverURL);
