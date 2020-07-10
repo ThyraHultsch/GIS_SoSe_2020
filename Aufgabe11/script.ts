@@ -10,7 +10,7 @@ namespace Aufgabe11{
 
     async function handleClickRein(): Promise<void> {
         formData = new FormData(document.forms[0]);
-        let serverURL: string = "https://thyra.herokuapp.com/";
+        let serverURL: string = "https://thyra.herokuapp.com";
         serverURL += "/rein";
 
         let query: URLSearchParams = new URLSearchParams(<any>formData);
@@ -24,14 +24,14 @@ namespace Aufgabe11{
 
     async function handleClickZeigen(): Promise<void> {
 
-        let serverURL: string = "https://thyra.herokuapp.com/";
+        let serverURL: string = "https://thyra.herokuapp.com";
         serverURL += "/zeigen";
 
         let ausgabe: Response = await fetch(serverURL);
         console.log(ausgabe);
         let datenbankausgabe: string = await ausgabe.json();
 
-        let serverResponse: HTMLElement = <HTMLElement> document.getElementById("serverResponse");
+        let serverResponse: HTMLElement = <HTMLElement> document.getElementById("DatenbankAusgabe");
         serverResponse.innerHTML = datenbankausgabe;
         console.log(datenbankausgabe);
 

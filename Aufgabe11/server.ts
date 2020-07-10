@@ -41,7 +41,7 @@ export namespace Aufgabe11 {
         if (_request.url) {   //mitgeschicktes Parsen
           let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
           let path: string | null = url.pathname;
-          if (path == "/retrieve") {
+          if (path == "/zeigen") {
             formularData.find({}).toArray(function(err: Mongo.MongoError, result: string[]): void {   //alles was du findest zum Array machen
             if (err)
               throw err;
@@ -57,7 +57,7 @@ export namespace Aufgabe11 {
             });
             }
             
-          else if (path == "/store")
+          else if (path == "/rein")
             formularData.insertOne(url.query);
         }
     }

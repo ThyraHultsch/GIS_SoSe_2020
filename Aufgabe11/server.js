@@ -35,7 +35,7 @@ var Aufgabe11;
         if (_request.url) { //mitgeschicktes Parsen
             let url = Url.parse(_request.url, true);
             let path = url.pathname;
-            if (path == "/retrieve") {
+            if (path == "/zeigen") {
                 formularData.find({}).toArray(function (err, result) {
                     if (err)
                         throw err;
@@ -48,7 +48,7 @@ var Aufgabe11;
                     _response.end();
                 });
             }
-            else if (path == "/store")
+            else if (path == "/rein")
                 formularData.insertOne(url.query);
         }
     }
