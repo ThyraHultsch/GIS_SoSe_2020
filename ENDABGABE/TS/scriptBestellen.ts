@@ -1,4 +1,4 @@
-namespace Eis{
+namespace Eis {
 
     let formData: FormData;
 

@@ -6,10 +6,10 @@ namespace Eis {
         name: string;
         preis: number;
     }
-   export let products: Produkte[];
+    export let products: Produkte[];
     loadArticles("../TS/produkte.json");
 
-    async function loadArticles(_url: RequestInfo): Promise <void> {
+    async function loadArticles(_url: RequestInfo): Promise<void> {
         let response: Response = await fetch(_url);
         let jsonArray: JSON = await response.json();
         products = await JSON.parse(JSON.stringify(jsonArray));
