@@ -1,0 +1,72 @@
+[   {
+        "kategorie": "Sorte",
+        "name": "Erdbeere",
+        "preis": "2"
+    },
+    {
+        "kategorie": "Sorte",
+        "name": "Himbeere",
+        "preis": "2"
+    },
+    {
+        "kategorie": "Sorte",
+        "name": "Mango",
+        "preis": "2"
+    },
+    {
+        "kategorie": "Sorte",
+        "name": "Melone",
+        "preis": "2"
+    },
+    {
+        "kategorie": "Sorte",
+        "name": "Schokolade",
+        "preis": "2"
+    },
+    {
+        "kategorie": "Sorte",
+        "name": "Zitrone" ,
+        "preis": "2"
+    },
+    {
+        "kategorie": "Sorte",
+        "name": "Amarena",
+        "preis": "2"
+    },
+    {
+        "kategorie": "Sorte",
+        "name": "Vanille",
+        "preis": "2"
+    },
+
+    {
+        "kategorie": "Behälter",
+        "name": "Waffel",
+        "preis": "0.50"
+    },
+    {
+        "kategorie": "Behälter",
+        "name": "Plastikbecher",
+        "preis": "0.50"
+    },
+    {
+        "kategorie": "Behälter",
+        "name": "Pappbecher",
+        "preis": "0.50"
+    },
+    {
+        "kategorie": "Extras",
+        "name": "Streusel",
+        "preis": "1"
+    },
+    {
+        "kategorie": "Extras",
+        "name": "Schokoladensoße",
+        "preis":"1"
+    },
+    {
+        "kategorie": "Extras",
+        "name": "Krokant",
+        "preis": "1"
+    }
+]

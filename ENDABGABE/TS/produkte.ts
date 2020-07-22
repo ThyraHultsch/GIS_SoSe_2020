@@ -1,4 +1,4 @@
-namespace Eis{
+namespace Eis {
 
 
     export interface Produkte {
@@ -6,8 +6,17 @@ namespace Eis{
         name: string;
         preis: number;
     }
+   export let products: Produkte[];
+    loadArticles("../TS/produkte.json");
 
-    let a1: Produkte = {kategorie: "Sorte", name: "Erdbeere" , preis: 2 };
+    async function loadArticles(_url: RequestInfo): Promise <void> {
+        let response: Response = await fetch(_url);
+        let jsonArray: JSON = await response.json();
+        products = await JSON.parse(JSON.stringify(jsonArray));
+        createProducts();
+    }
+
+    /* let a1: Produkte = {kategorie: "Sorte", name: "Erdbeere" , preis: 2 };
     let a2: Produkte = {kategorie: "Sorte", name: "Himbeere", preis: 2 };
     let a3: Produkte = {kategorie: "Sorte", name: "Mango", preis: 2 };
     let a4: Produkte = {kategorie: "Sorte", name: "Melone", preis: 2 };
@@ -24,6 +33,6 @@ namespace Eis{
     let a13: Produkte = {kategorie: "Extras", name: "Schokoladensoße", preis: 1 };
     let a14: Produkte = {kategorie: "Extras", name: "Krokant", preis: 1 };
 
-    export let products: Produkte[] = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14];
+    export let products: Produkte[] = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14]; */
 
 }
