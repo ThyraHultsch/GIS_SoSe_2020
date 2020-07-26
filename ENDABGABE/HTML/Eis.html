@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Bilder/favicon-32x32.png" sizes="32x32" />
     <script src="../TS/scriptEis.js" defer></script>
     <script src="../TS/produkte.js"></script>
+    <script src="../TS/scriptBestellen.js" defer></script>
     <link rel="stylesheet" href="../CSS/Startseite.css">
     
     <title>frozen</title>
@@ -13,20 +15,37 @@
     <header>
         <div id="header">
             <img id="logo" src="../Bilder/frozen-logos_transparent.png" alt="logo"> <br>
-            <nav id="navigation">
-                <a href="Startseite.html">Home</a>
-                <a href="#">The perfect ice cream</a>
-                <a href="#">About us</a>
-                <a href="#">Blog</a>
-            </nav>
+            <div class="dropdown">
+                <button class="buttonDropdown">Menü</button>
+                <div class="dropdownContent">
+                    <a href="Startseite.html">Home</a>
+                    <a href="Eis.html">The perfect ice cream</a>
+                    <a href="AboutUs.html">About us</a>
+                    <a href="Blog.html">Blog</a>
+                </div>   
+            </div>
+            
         </div>
     </header>
     <div id="headerReplacement">
 
     </div>
     <div id="contentEis">
-        <div id="contentÜberschrift">
+        <div class="contentÜberschrift">
             <p>Stelle dir dein perfektes Eis zusammen!</p>
+        </div>
+        <div id="informationDiv">
+            <p>Hier kannst du dir dein individuelles Eis zusammenstellen.
+                Wähle einfach deine Lieblingseissorte, deinen gewünschten Behälter, und wenn du möchtest 
+                auch noch ein paar Extras aus.
+            </p>
+            <br>
+            <i>- Achtung - Aufgrund der aktuellen Covid-19 Situation können Sie aktuell nur 5 Produkte 
+                bestellen. Momentan arbeiten wir mit Hochdruck daran, die Lieferengpässe zeitnah zu beheben. Wir bitten Sie dies zu entschuldigen.
+    
+            </i>
+
+        
         </div>
         
        <!--  <div class="Auswahl">

@@ -3,7 +3,7 @@ var Eis;
 (function (Eis) {
     console.log("test");
     let nummer = 0;
-    let anzahlWarenkorb = 0;
+    Eis.anzahlWarenkorb = 0;
     if (Number(localStorage.getItem("anzahl")) != 0) {
         nummer = Number(localStorage.getItem("anzahl"));
     }
@@ -14,12 +14,24 @@ var Eis;
     let divEissorte = document.createElement("div");
     divEissorte.id = "eissorte";
     divAuswahl.appendChild(divEissorte);
+    let divEissorteÜberschrift = document.createElement("h1");
+    divEissorteÜberschrift.setAttribute("class", "überschriftDiv");
+    divEissorteÜberschrift.innerHTML = "Eissorte";
+    divEissorte.appendChild(divEissorteÜberschrift);
     let divBehälter = document.createElement("div");
     divBehälter.id = "behälter";
     divAuswahl.appendChild(divBehälter);
+    let divBehälterÜberschrift = document.createElement("h1");
+    divBehälterÜberschrift.setAttribute("class", "überschriftDiv");
+    divBehälterÜberschrift.innerHTML = "Behälter";
+    divBehälter.appendChild(divBehälterÜberschrift);
     let divExtras = document.createElement("div");
     divExtras.id = "extras";
     divAuswahl.appendChild(divExtras);
+    let divExtrasÜberschrift = document.createElement("h1");
+    divExtrasÜberschrift.setAttribute("class", "überschriftDiv");
+    divExtrasÜberschrift.innerHTML = "Extras";
+    divExtras.appendChild(divExtrasÜberschrift);
     /* createProducts(); */
     /* let itemNumber: number = 0; */
     function createProducts() {
@@ -54,7 +66,7 @@ var Eis;
             divPreis.appendChild(preis);
             let buttonHinzufügen = document.createElement("button");
             divProdukt.appendChild(buttonHinzufügen);
-            buttonHinzufügen.id = "buttonHinzufügen";
+            buttonHinzufügen.setAttribute("class", "buttonHinzufügen");
             buttonHinzufügen.innerHTML = "auswählen";
             buttonHinzufügen.addEventListener("click", handleClick);
         }
@@ -95,17 +107,17 @@ var Eis;
     }
     function handleClick(_event) {
         nummer = 0;
-        anzahlWarenkorb = Number(localStorage.getItem("anzahlWarenkorb"));
-        if (anzahlWarenkorb >= 5) {
-            alert("Sie können maximal 5 Kugeln Eis auswählen.");
+        Eis.anzahlWarenkorb = Number(localStorage.getItem("anzahlWarenkorb"));
+        if (Eis.anzahlWarenkorb >= 5) {
+            alert("Sie können maximal 5 Produkte auswählen.");
         }
         else {
-            anzahlWarenkorb++;
-            localStorage.setItem("anzahlWarenkorb", "" + anzahlWarenkorb);
+            Eis.anzahlWarenkorb++;
+            localStorage.setItem("anzahlWarenkorb", "" + Eis.anzahlWarenkorb);
             if (Number(localStorage.getItem("anzahl")) != 0) {
                 nummer = Number(localStorage.getItem("anzahl"));
             }
-            console.log("Warenkorb:" + anzahlWarenkorb);
+            console.log("Warenkorb:" + Eis.anzahlWarenkorb);
             nummer++;
             let ausgewähltesProdukt = _event.currentTarget;
             console.log(ausgewähltesProdukt);
@@ -147,31 +159,28 @@ var Eis;
     function handleDeleteButton(_event) {
         let ausgewähltLöschen = _event.currentTarget;
         let ausgewähltDIVLöschen = ausgewähltLöschen.parentNode;
-        console.log(ausgewähltLöschen);
+        /* console.log(ausgewähltLöschen);
         console.log(ausgewähltDIVLöschen);
         console.log(ausgewähltLöschen.previousSibling?.firstChild);
-        console.log(ausgewähltLöschen.parentNode?.firstChild?.firstChild);
+        console.log(ausgewähltLöschen.parentNode?.firstChild?.firstChild); */
         let divAnzahl = ausgewähltDIVLöschen.getAttribute("divAnzahl");
-        console.log("divanzahl" + divAnzahl);
-        /* let name: string = <string>ausgewähltLöschen.parentNode?.firstChild?.firstChild?.textContent;
+        /*  let name: string = <string>ausgewähltLöschen.parentNode?.firstChild?.firstChild?.textContent;
         let preis: string = <string>ausgewähltLöschen.previousSibling?.firstChild?.textContent;
-        
-        console.log(name); */
-        /* console.log(localStorage.getItem(name + divAnzahl)); */
+         */
         localStorage.removeItem("name" + divAnzahl);
-        console.log(localStorage.getItem(name + divAnzahl + ""));
+        console.log("name" + divAnzahl);
+        console.log(localStorage);
         localStorage.removeItem("preis" + divAnzahl + "");
+        console.log("   DIVANZAHL" + divAnzahl);
         /* localStorage.removeItem("name" + nummer);
         localStorage.removeItem("preis" + nummer); */
         let anzahl = Number(localStorage.getItem("anzahl"));
-        //anzahl--;
         localStorage.setItem("anzahl", "" + anzahl);
         ausgewähltDIVLöschen.remove();
-        //Warenkorbanzahl verringern
+        //Warenkorb verringern
         let anzahlWarenkorbdelete = Number(localStorage.getItem("anzahlWarenkorb"));
         anzahlWarenkorbdelete--;
         localStorage.setItem("anzahlWarenkorb", "" + anzahlWarenkorbdelete);
-        console.log("Warenkorb:" + anzahlWarenkorbdelete);
     }
     //Lieferdaten erstellen
     let divLieferdaten = document.createElement("div");
@@ -213,7 +222,7 @@ var Eis;
     let inputStraße = document.createElement("input");
     labelStraße.appendChild(inputStraße);
     inputStraße.setAttribute("type", "text");
-    inputStraße.setAttribute("name", "nachname");
+    inputStraße.setAttribute("name", "straße");
     inputStraße.setAttribute("placeholder", "Straße und Hausnummer");
     let break3 = document.createElement("br");
     formular.appendChild(break3);
@@ -245,10 +254,5 @@ var Eis;
     buttonBestellen.id = "in";
     buttonBestellen.setAttribute("type", "button");
     buttonBestellen.innerHTML = "Bestellen";
-    buttonBestellen.addEventListener("click", allesLöschen);
-    //LocalStorage löschen
-    function allesLöschen(_event) {
-        localStorage.clear();
-    }
 })(Eis || (Eis = {}));
 //# sourceMappingURL=scriptEis.js.map

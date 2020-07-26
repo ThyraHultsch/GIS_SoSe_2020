@@ -6,25 +6,31 @@ var Eis;
     buttonActionBestellen.addEventListener("click", handleClickBestellen);
     async function handleClickBestellen() {
         formData = new FormData(document.forms[0]);
-        let serverURL = "https://thyra.herokuapp.com";
+        let serverURL = "http://localhost:8100";
         serverURL += "/bestellen";
         let query = new URLSearchParams(formData);
-        serverURL += "?" + query.toString;
+        serverURL += "?" + query.toString();
+        let i = 1;
+        let nummer = Number(localStorage.getItem("anzahl"));
+        let reihenfolge = 1;
+        while (i <= nummer) {
+            if (localStorage.getItem("name" + i) != null) {
+                console.log(i);
+                serverURL += "&" + "Produkt" + reihenfolge + "=" + localStorage.getItem("name" + i);
+                console.log(localStorage.getItem("name" + i));
+                i++;
+                reihenfolge++;
+            }
+            else {
+                i++;
+            }
+            console.log(serverURL);
+        }
+        console.log(serverURL);
+        localStorage.clear();
         let formular = document.getElementById("formular");
         formular.reset();
         await fetch(serverURL);
-    }
-    let buttonActionAnzeigen = document.getElementById("buttonAnzeigen");
-    buttonActionAnzeigen.addEventListener("click", handleClickAnzeigen);
-    async function handleClickAnzeigen() {
-        let serverURL = "https://thyra.herokuapp.com";
-        serverURL += "/anzeigen";
-        let ausgabe = await fetch(serverURL);
-        console.log(ausgabe);
-        let datenbankausgabe = await ausgabe.json();
-        let serverResponse = document.getElementById("DatenbankAusgabe");
-        serverResponse.innerHTML = datenbankausgabe;
-        console.log(datenbankausgabe);
     }
 })(Eis || (Eis = {}));
 //# sourceMappingURL=scriptBestellen.js.map

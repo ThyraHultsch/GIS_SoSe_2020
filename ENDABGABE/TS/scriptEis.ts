@@ -2,7 +2,7 @@ namespace Eis {
 
     console.log("test");
     let nummer: number = 0;
-    let anzahlWarenkorb: number = 0;
+    export let anzahlWarenkorb: number = 0;
     if (Number(localStorage.getItem("anzahl")) != 0) {
         nummer = Number(localStorage.getItem("anzahl"));
 
@@ -19,13 +19,28 @@ namespace Eis {
     divEissorte.id = "eissorte";
     divAuswahl.appendChild(divEissorte);
 
+    let divEissorteÜberschrift: HTMLElement = document.createElement("h1");
+    divEissorteÜberschrift.setAttribute("class", "überschriftDiv");
+    divEissorteÜberschrift.innerHTML = "Eissorte";
+    divEissorte.appendChild(divEissorteÜberschrift);
+
     let divBehälter: HTMLElement = document.createElement("div");
     divBehälter.id = "behälter";
     divAuswahl.appendChild(divBehälter);
 
+    let divBehälterÜberschrift: HTMLElement = document.createElement("h1");
+    divBehälterÜberschrift.setAttribute("class", "überschriftDiv");
+    divBehälterÜberschrift.innerHTML = "Behälter";
+    divBehälter.appendChild(divBehälterÜberschrift);
+
     let divExtras: HTMLElement = document.createElement("div");
     divExtras.id = "extras";
     divAuswahl.appendChild(divExtras);
+
+    let divExtrasÜberschrift: HTMLElement = document.createElement("h1");
+    divExtrasÜberschrift.setAttribute("class", "überschriftDiv");
+    divExtrasÜberschrift.innerHTML = "Extras";
+    divExtras.appendChild(divExtrasÜberschrift);
 
     /* createProducts(); */
     /* let itemNumber: number = 0; */
@@ -68,7 +83,7 @@ namespace Eis {
 
             let buttonHinzufügen: HTMLElement = document.createElement("button");
             divProdukt.appendChild(buttonHinzufügen);
-            buttonHinzufügen.id = "buttonHinzufügen";
+            buttonHinzufügen.setAttribute("class", "buttonHinzufügen") ;
 
             buttonHinzufügen.innerHTML = "auswählen";
             buttonHinzufügen.addEventListener("click", handleClick);
@@ -133,7 +148,7 @@ namespace Eis {
 
 
         if (anzahlWarenkorb >= 5) {
-            alert("Sie können maximal 5 Kugeln Eis auswählen.");
+            alert("Sie können maximal 5 Produkte auswählen.");
             
         } else {
 
@@ -186,6 +201,8 @@ namespace Eis {
             produkt.setAttribute("divAnzahl", "" + nummer);
             localStorage.setItem("name" + nummer, name);
             localStorage.setItem("preis" + nummer, preis);
+
+        
         }
 
 
@@ -201,36 +218,34 @@ namespace Eis {
     function handleDeleteButton(_event: Event): void {
         let ausgewähltLöschen: HTMLElement = <HTMLElement>_event.currentTarget;
         let ausgewähltDIVLöschen: HTMLElement = <HTMLElement>ausgewähltLöschen.parentNode;
-        console.log(ausgewähltLöschen);
+        /* console.log(ausgewähltLöschen);
         console.log(ausgewähltDIVLöschen);
         console.log(ausgewähltLöschen.previousSibling?.firstChild);
-        console.log(ausgewähltLöschen.parentNode?.firstChild?.firstChild);
+        console.log(ausgewähltLöschen.parentNode?.firstChild?.firstChild); */
 
 
         let divAnzahl: string = <string>ausgewähltDIVLöschen.getAttribute("divAnzahl");
-        console.log("divanzahl" + divAnzahl);
-        /* let name: string = <string>ausgewähltLöschen.parentNode?.firstChild?.firstChild?.textContent;
+        /*  let name: string = <string>ausgewähltLöschen.parentNode?.firstChild?.firstChild?.textContent;
         let preis: string = <string>ausgewähltLöschen.previousSibling?.firstChild?.textContent;
-        
-        console.log(name); */
-
-        /* console.log(localStorage.getItem(name + divAnzahl)); */
+         */
+                
         localStorage.removeItem("name" + divAnzahl);
-        console.log(localStorage.getItem(name + divAnzahl + ""));
+        console.log("name" + divAnzahl);
+        console.log(localStorage)
         localStorage.removeItem("preis" + divAnzahl + "");
-
+        console.log("   DIVANZAHL" + divAnzahl);
         /* localStorage.removeItem("name" + nummer);
         localStorage.removeItem("preis" + nummer); */
         let anzahl: number = Number(localStorage.getItem("anzahl"));
-        //anzahl--;
+        
         localStorage.setItem("anzahl", "" + anzahl);
         ausgewähltDIVLöschen.remove();
 
-        //Warenkorbanzahl verringern
+        //Warenkorb verringern
         let anzahlWarenkorbdelete: number = Number(localStorage.getItem("anzahlWarenkorb"));
         anzahlWarenkorbdelete--;
         localStorage.setItem("anzahlWarenkorb", "" + anzahlWarenkorbdelete);
-        console.log("Warenkorb:" + anzahlWarenkorbdelete);
+       
 
 
     }
@@ -291,7 +306,7 @@ namespace Eis {
     labelStraße.appendChild(inputStraße);
 
     inputStraße.setAttribute("type", "text");
-    inputStraße.setAttribute("name", "nachname");
+    inputStraße.setAttribute("name", "straße");
     inputStraße.setAttribute("placeholder", "Straße und Hausnummer");
 
     let break3: HTMLElement = document.createElement("br");
@@ -334,19 +349,9 @@ namespace Eis {
     buttonBestellen.id = "in";
     buttonBestellen.setAttribute("type", "button");
     buttonBestellen.innerHTML = "Bestellen";
-    buttonBestellen.addEventListener("click", allesLöschen);
+   
 
-
-    //LocalStorage löschen
-
-    function allesLöschen(_event: Event): void {
-        localStorage.clear();
-    }
-
-
-
-
-
+    
 
 
 

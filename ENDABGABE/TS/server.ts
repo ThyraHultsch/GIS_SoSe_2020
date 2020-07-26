@@ -2,17 +2,14 @@ import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
 
+//Orientiert am Code von Aufgabe 11
+
 export namespace Eis {
 
     let formularData: Mongo.Collection;
     let databaseUrl: string;
-
-    let myArgs: string[] = process.argv.slice(2);
-    if (myArgs[0] == "local") {
-        databaseUrl = "mongodb://localhost:27017";
-    } else {
-        databaseUrl = "mongodb+srv://Testuser:1234@cluster0.whstr.mongodb.net/Endabgabe?retryWrites=true&w=majority";
-    }
+    
+    databaseUrl = "mongodb+srv://Testuser:1234@cluster0.whstr.mongodb.net/Endabgabe?retryWrites=true&w=majority";
     connectToDatabase(databaseUrl);
 
     let port: number = Number(process.env.PORT);
@@ -22,6 +19,7 @@ export namespace Eis {
 
     let server: Http.Server = Http.createServer();
     server.addListener("request", handleRequest);
+    server.listen(port);
 
     async function connectToDatabase(_url: string): Promise<void> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
@@ -35,18 +33,25 @@ export namespace Eis {
         _response.setHeader("content-type", "text/html; charset=utf-8");
 
         if (_request.url) {
+            let resultString: string = "";
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             let path: string | null = url.pathname;
+            
             if (path == "/anzeigen") {
                 formularData.find({}).toArray(function (err: Mongo.MongoError, result: string[]): void {
                     if (err) {
                         throw err;
                     }
-                    let resultString: string = "";
+                    resultString = resultString + "[";
                     for (let i: number = 0; i < result.length; i++) {
-                        resultString += JSON.stringify(result[i]) + ",";
+                        resultString += JSON.stringify(result[i]);
+
+                        if (i != result.length - 1) {
+                            resultString = resultString + ",";
+                        }
 
                     }
+                    resultString = resultString + "]";
 
                     console.log(resultString);
                     _response.write(JSON.stringify(resultString));
@@ -56,6 +61,13 @@ export namespace Eis {
 
             else if (path == "/bestellen") {
                 formularData.insertOne(url.query);
+                _response.end();
+            }
+
+            else if (path == "/loeschen") {
+                console.log(url.query.id);
+                formularData.deleteOne({"_id": new Mongo.ObjectID(<string>url.query.id)});
+                _response.end();
             }
         }
     }

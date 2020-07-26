@@ -26,8 +26,10 @@ time, mark, audio, video {
     vertical-align:baseline;
     background:transparent;
 }
+/* Ende Reset Stylesheet Code */
+
 header{
-    height: 200px;
+    height: 220px;
     background: #F5F4F4;
     text-align: center;
     padding-bottom: 10px;
@@ -39,13 +41,30 @@ header{
     height: 210px;
 }
 #logo{
+    margin: 0 auto;
     margin-top: -65px;
     max-width:250px;
     margin-bottom: -20px;
     
+    
+}
+/* dropdown */
+
+.buttonDropdown{
+    
+    width: 100%;
+    margin-top: -40px;
+    border-style: none;
+    background-color: #F5F4F4;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    visibility: hidden;
+    
 }
 
 a{
+   
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
@@ -53,8 +72,9 @@ a{
     margin: 5%;
     padding: 1%;
     color: black;
+   
 }
-nav a:hover{
+.dropdownContent a:hover{
     background-color: #e5e5e5;
 
 }
@@ -73,7 +93,7 @@ body{
     width: 100%;
     height: 100px;
     background: #F5F4F4;
-    /* padding-top: 40px; */
+    
 }
 
 #impressum p{
@@ -82,6 +102,7 @@ body{
 }
 
 #ButtonMitarbeiteransicht{
+    text-align: center;
     background-color: #e5e5e5;
     line-height: 30px;
     width: 30%;
@@ -92,20 +113,16 @@ body{
     background-color: #f7e9e7;
 }
 
-
-
-
-
 #content{
     height: calc(100vh - 80px);
     
 }
 
 /* INHALT */
-#contentÜberschrift{
+.contentÜberschrift{
     
-    margin: 0 auto;
-    margin-top: 40px;
+    margin: 20px auto;
+    margin-top: 80px;
     padding: 15px;
     background-color: rgba(245, 244, 244, 0.5);
     width: 50%;
@@ -113,7 +130,7 @@ body{
     border-radius: 10px;
 }
 
-#contentÜberschrift p{
+.contentÜberschrift p{
     text-align: center;
     letter-spacing: 1px;
     font-family: Arial, Helvetica, sans-serif;
@@ -132,25 +149,26 @@ body{
     text-align: center;
 }
 #eissorte{
-    width:25%;
+    width:450px;
     background-color: #F5F4F4;
-    margin-right: 3%;
+    margin: 3% 10px;
     border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     
 }
 #behälter{
-    width:25%;
+    width:450px;
     background-color: #F5F4F4;
-    margin-right: 3%;
+    margin: 3% 10px;
     border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 #extras{
-    width: 25%;
+    width: 450px;
     background-color: #F5F4F4;
+    margin: 3% 10px;
     border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -165,7 +183,7 @@ body{
     border-width: 1px;
     margin: 10px 10px;
     
-    border-color: black;
+    border-color: #d6c6c4;
     border-style: solid;
     padding: 3px;
     /* align-content: space-around; */
@@ -206,6 +224,7 @@ body{
     border-radius: 10px;
     text-align: center;
     margin-bottom: 40px;
+       
 }
 #lieferdaten{
     
@@ -214,11 +233,6 @@ body{
     background-color: rgba(245, 244, 244, 0.8);
     width: fit-content;
     margin: 30px auto;
-    
-    
-    
-
-
     
 }
 .button{
@@ -234,14 +248,19 @@ body{
     background-color: rgba(247, 233, 231, 0.8);
 }
 
-#buttonHinzufügen{
+.buttonHinzufügen{
     margin-left: 8%;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
+    background-color: #e5e5e5;
+    border-style: solid;
+    border-color: #d3d2d2;
+    border-radius: 5px;
+    border-width: 1px;
     
 }
 
-#buttonHinzufügen:hover{
+.buttonHinzufügen:hover{
     border-color: pink;
     background-color: white;
 }
@@ -259,6 +278,7 @@ body{
     min-height: 500px;
     text-align: center;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #mitarbeiterContent h1{
@@ -271,6 +291,7 @@ body{
     line-height: 40px;
     width: 30%;
     margin-top: 30px;
+    margin-bottom: 30px;
     background-color: #e5e5e5;
     border-color:#d8d8d8 ;
     border-style: solid;
@@ -278,3 +299,232 @@ body{
 #buttonAnzeigen:hover{
     background-color: #f7e9e7;
 }
+
+
+#DatenbankAusgabe{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    
+}
+
+.bestellungEinzeln{
+    background-color: #d8d8d8;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.bestellungEinzeln:hover{
+    background-color: #d3d2d2;
+}
+
+#informationDiv{
+    background-color: #F5F4F4;
+    width: 80%;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.buttonLöschen2{
+    line-height: 40px;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #e5e5e5;
+    border-color:#d8d8d8 ;
+    border-style: solid; 
+}
+
+.contentAboutUs{
+    background-color: #F5F4F4;
+    margin: 100px auto;
+    width: 80%;
+    border-radius: 50px;
+    
+}
+.contentAboutUs h1 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    letter-spacing: 1px;
+    
+    
+}
+.socialMediaDiv{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+}
+
+.socialMediaLogo {
+    
+   
+    margin: 50px;
+    width: 60px;
+
+}
+.socialMediaText {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+    padding-bottom: 40px;
+    line-height: 20px;
+}
+#contentBlog{
+    background-color: #F5F4F4;
+    width: 80%;
+    margin: 100px auto;
+    padding: 50px 0px;
+    border-radius: 50px;
+}
+#contentBlog img {
+    width: 40%;
+    display: block;
+    margin: 80px auto;
+}
+
+#memesH1 {
+    line-height: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+
+.contentStartseite{
+    width: 80%;
+    background-color: #F5F4F4;
+    margin: 70px auto;
+    border-radius: 50px;
+    padding: 20px 0px;
+}
+
+.contentStartseite h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 25px;
+}
+.bilderStartseite {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+}
+@media only screen and (max-width: 599px){
+
+    .bilderStartseite {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+    }
+    .buttonDropdown{
+        visibility: visible;
+    }
+
+    .dropdown{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        
+    }
+    .dropdownContent{
+       display: none;
+       position: absolute;
+       z-index: 1;
+       background-color: #F5F4F4;
+       width: 100%;
+       
+    }
+    .dropdownContent a{
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+    }
+    .buttonDropdown:hover .navigation{
+        visibility: visible;
+        display: block;
+    }
+
+    header{
+        height: 190px;
+        
+    }
+
+    .dropdown:hover .dropdownContent {
+        display: block;
+    }
+
+    #ButtonMitarbeiteransicht{
+        width: 100%
+    }
+
+    #contentBlog img {
+        width: 70%;
+    }
+
+
+}
+
+@media only screen and (min-width:600px) and (max-width:1024px){
+    .buttonDropdown{
+        visibility: visible;
+        font-size: 30px;
+    }
+
+    .dropdown{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        
+    }
+    .dropdownContent{
+       display: none;
+       position: absolute;
+       z-index: 1;
+       background-color: #F5F4F4;
+       width: 100%;
+       
+    }
+    .dropdownContent a{
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+        font-size: 20px;
+    }
+    .buttonDropdown:hover .navigation{
+        visibility: visible;
+        display: block;
+    }
+
+    header{
+        height: 190px;
+        
+    }
+
+    .dropdown:hover .dropdownContent {
+        display: block;
+    }
+
+    #informationDiv{
+        font-size: 20px;
+    }
+
+    #contentBlog img {
+        width: 70%;
+    }
+
+    .socialMediaText {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+
+}
+
