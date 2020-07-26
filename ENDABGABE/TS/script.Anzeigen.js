@@ -4,7 +4,7 @@ var Eis;
     let buttonActionAnzeigen = document.getElementById("buttonAnzeigen");
     buttonActionAnzeigen.addEventListener("click", handleClickAnzeigen);
     async function handleClickAnzeigen() {
-        let serverURL = "http://localhost:8100";
+        let serverURL = "https://thyra.herokuapp.com";
         serverURL += "/anzeigen";
         let ausgabe = await fetch(serverURL);
         console.log(ausgabe);
@@ -149,7 +149,7 @@ var Eis;
             let current = _event.currentTarget;
             let idCurrent = current.previousSibling;
             let idCurrentString = idCurrent.getAttribute("idBestellung");
-            let serverURL = "http://localhost:8100";
+            let serverURL = "https://thyra.herokuapp.com";
             serverURL = serverURL + "/loeschen";
             serverURL = serverURL + "?" + "id=" + idCurrentString;
             console.log(serverURL);

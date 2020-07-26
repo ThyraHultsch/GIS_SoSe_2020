@@ -6,7 +6,7 @@ var Eis;
     buttonActionBestellen.addEventListener("click", handleClickBestellen);
     async function handleClickBestellen() {
         formData = new FormData(document.forms[0]);
-        let serverURL = "http://localhost:8100";
+        let serverURL = "https://thyra.herokuapp.com";
         serverURL += "/bestellen";
         let query = new URLSearchParams(formData);
         serverURL += "?" + query.toString();
